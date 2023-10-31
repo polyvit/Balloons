@@ -1,0 +1,44 @@
+.btn
+  &, &:link, &:visited
+    @include style-link($base-text-color)
+    padding: 1.5rem 4rem
+    background-color: $color-white
+    border-radius: 5rem
+    transition: all .1s
+    position: relative
+    font-size: $font-size-h3
+    box-shadow: $box-shadow
+    @include respond(tab-port)
+      padding: 2rem 7rem
+  &:hover
+    transform: translateY(-4px)
+    box-shadow: $box-shadow
+    &::after
+      opacity: 0
+      transform: scale(1.5)
+  &:active
+    transform: translateY(-2px)
+  &::after
+    content: ''
+    background-color: $color-white
+    width: 100%
+    height: 100%
+    border-radius: 5rem
+    display: inline-block
+    position: absolute
+    top: 0
+    left: 0
+    z-index: -1
+    transition: all 1s
+  &_animated
+    animation: btnToUp .5s
+    animation-fill-mode: backwards
+
+  // Brown button
+  &_brown
+    &, &:link, &:visited
+      background: $color-dark-brown
+      color: $color-white
+      border: none
+    &::after
+      background-color: $color-dark-brown
