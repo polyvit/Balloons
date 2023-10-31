@@ -4,7 +4,7 @@
 
 Учебный проект по верстке с анимацией
 
-[See demo]()
+[See demo](https://polyvit.github.io/Balloons/)
 
 _Completed in 2023_
 
